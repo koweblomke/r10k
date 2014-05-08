@@ -14,6 +14,8 @@ class r10k::install::gem (
     }
   } else {
     include ruby
+    Class['::ruby']    ->
+    Package['r10k']
   }
 
   include ruby::dev
